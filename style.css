@@ -1,0 +1,195 @@
+
+@font-face {
+  font-family: JMH Typewriter;
+  src: url(./images/jmh_typewriter/JMH\ Typewriter.otf);
+}
+*{
+  font-family: JMH Typewriter;
+}
+
+
+  .wrapper {
+    
+    /* This part is important for centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+ 
+  .typing-demo {
+    width: 32ch;
+    
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  .break{
+    display: none;
+  }
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+ .wrapper::before{
+    background: url('./images/timothy-eberly-U4UwzRSns6M-unsplash.jpg')no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@media screen and (max-width:670px) {
+  .typing-demo{
+    animation: typing 2.6s steps(22), blink .5s step-end infinite alternate;
+    font-size: 1.5em;
+  }
+  .break{
+    display: initial;
+  }
+}
+
+
+  #text{
+    position: relative;
+    align-items: center;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   margin: 2.7rem 0px 3.6rem 0rem;
+}
+#text a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+   
+    /* margin: 40px 0; */
+    color: #212529;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin:2.5rem;
+    margin-top: 0px;
+}
+.text{
+  font-size: 0.8em;
+  max-width: 734px;
+}
+.h-primary{
+  font-size: 1.8em;
+  
+}
+.h-secondary{
+  font-size: 1.2em;
+}
+#text a span{
+    position: absolute;
+    display: block;
+}
+#text a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#212529);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+#text a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#212529);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+#text a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#212529);
+    animation: animate3 2s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+#text a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#212529);
+    animation: animate4 2s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+
+.text-gray-600{
+  margin-bottom: 3rem;
+}
+
+.d-flex img{
+  width: 45px;
+  height: 45px;
+}
+footer img{
+  width: 45px;
+  height: 45px;
+}
+
+.about-img{
+  width: 100%;
+  height: 79px;
+}
+
